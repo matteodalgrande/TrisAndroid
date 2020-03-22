@@ -1,11 +1,11 @@
 <resources>
-    <id name="bottone1"></id>
-    <id name="bottone2"></id>
-    <id name="bottone3"></id>
-    <id name="bottone4"></id>
-    <id name="bottone5"></id>
-    <id name="bottone6"></id>
-    <id name="bottone7"></id>
-    <id name="bottone8"></id>
-    <id name="bottone9"></id>
+    <id type="id" name="bottone1"></id>
+    <id type="id" name="bottone2"></id>
+    <id type="id" name="bottone3"></id>
+    <id type="id" name="bottone4"></id>
+    <id type="id" name="bottone5"></id>
+    <id type="id" name="bottone6"></id>
+    <id type="id" name="bottone7"></id>
+    <id type="id" name="bottone8"></id>
+    <id type="id" name="bottone9"></id>
 </resources>

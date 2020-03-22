@@ -25,19 +25,19 @@ tools:context=".MainActivity">
             android:layout_height="100dp">
 
             <Button
-                android:id="@+id/bottone1"
+                android:tag="1"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
 
             <Button
-                android:id="@+id/bottone2"
+                android:tag="2"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
 
             <Button
-                android:id="@+id/bottone3"
+                android:tag="3"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
@@ -48,16 +48,19 @@ tools:context=".MainActivity">
             android:layout_height="100dp">
 
             <Button
+                android:tag="4"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
 
             <Button
+                android:tag="5"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
 
             <Button
+                android:tag="6"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
@@ -68,16 +71,19 @@ tools:context=".MainActivity">
             android:layout_height="100dp">
 
             <Button
+                android:tag="7"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
 
             <Button
+                android:tag="8"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
 
             <Button
+                android:tag="9"
                 android:layout_width = "100dp"
                 android:layout_height="100dp"
                 android:onClick="click" />
