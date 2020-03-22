@@ -6,19 +6,10 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MainActivity">
 
-<!--<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
- -->
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:background="#FF0000FF"
+        android:layout_height="match_parent"
+        android:background="#009688"
         android:orientation="vertical">
         <TableRow
             android:layout_width="match_parent"
@@ -26,20 +17,23 @@ tools:context=".MainActivity">
 
             <Button
                 android:tag="1"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
             <Button
                 android:tag="2"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
             <Button
                 android:tag="3"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
         </TableRow>
@@ -49,20 +43,23 @@ tools:context=".MainActivity">
 
             <Button
                 android:tag="4"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
             <Button
                 android:tag="5"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
             <Button
                 android:tag="6"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
         </TableRow>
 
@@ -72,20 +69,23 @@ tools:context=".MainActivity">
 
             <Button
                 android:tag="7"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
             <Button
                 android:tag="8"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
 
             <Button
                 android:tag="9"
-                android:layout_width = "100dp"
+                android:layout_width = "0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:onClick="click" />
         </TableRow>
     </TableLayout>

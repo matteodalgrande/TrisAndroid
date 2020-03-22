@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             //turno primo giocatore
             Button vista = (Button) view;
 
-            //andiamo a decrementare id, perchè gli array partono poi da zero
-            int tag = Integer.parseInt((String)view.getTag());
+            //andiamo a decrementare tag, perchè gli array partono poi da zero
+            int tag = Integer.parseInt((String)view.getTag()) - 1;
             if (tabella[tag] == null){
                 tabella[tag] = giocatore;
                 vista.setText("X");
@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             //turno secondo giocatore
             Button vista = (Button) view;
 
-            //andiamo a decrementare id, perchè gli array partono poi da zero
-            int tag = Integer.parseInt((String)view.getTag());
+            //andiamo a decrementare tag, perchè gli array partono poi da zero
+            int tag = Integer.parseInt((String)view.getTag()) - 1;
             if (tabella[tag] == null){
                 tabella[tag] = giocatore;
                 vista.setText("O");
