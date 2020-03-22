@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }else if(giocatore == "secondo"){
             //turno secondo giocatore
             giocatore = "primo";
-            Button vista = (Button) findViewById(view.getId());
+            Button vista = (Button) view;
             vista.setText("O");
         }
     }
