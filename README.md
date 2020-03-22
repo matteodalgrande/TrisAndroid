@@ -1,2 +1,2 @@
-# tris-android-8.0-oreo
+# TrisAndroid
 This is my tris application for android 8.0(oreo)
