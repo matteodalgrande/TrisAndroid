@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">TrisAndroid</string>
-    <string name="clicca_qui">Clicca qui!</string>
-    <string name="esempio_di_relative_layout">Esempio di Relative Layout</string>
+    <string name="cella1"></string>
+    <string name="cella2"></string>
+    <string name="cella3"></string>
+    <string name="cella4"></string>
+    <string name="cella5"></string>
+    <string name="cella6"></string>
+    <string name="cella7"></string>
+    <string name="cella8"></string>
+    <string name="cella9"></string>
 </resources>

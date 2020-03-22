@@ -17,24 +17,70 @@ tools:context=".MainActivity">
  -->
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="600dp"
+        android:background="#FF0000FF"
+        android:orientation="vertical">
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/esempio_di_relative_layout"/>
+            android:layout_height="100dp">
 
+            <Button
+                android:id="@+id/bottone1"
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+
+            <Button
+                android:id="@+id/bottone2"
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+
+            <Button
+                android:id="@+id/bottone3"
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
 
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="100dp">
+
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/clicca_qui"/>
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+
+            <Button
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+
+            <Button
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+
+            <Button
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
+
+            <Button
+                android:layout_width = "100dp"
+                android:layout_height="100dp"
+                android:onClick="click" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
