@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_centerInParent="true"
+    android:gravity="center_horizontal"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="First player"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/shellGrey"
+        android:drawableLeft="@drawable/player1"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Second player"
+        android:textColor="@color/white"
+        android:textColorHint="@color/shellGrey"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/player2" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textEdit2"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="cambiaSchermata"
+        android:background="@drawable/shape"
+        android:text="Play"
+        android:textColor="@color/white"
+        >
+    </Button>
+</LinearLayout>

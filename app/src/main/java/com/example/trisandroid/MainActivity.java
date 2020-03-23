@@ -122,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
 
     //questa funzione controlla la vittoria e cambia il giocatore
     private void controllaVittoria(String giocatore) {
-        System.out.println("DENTRO");
         if( giocatore == "primo" && ((tabella[0] == tabella[1] && tabella[0] == tabella[2] && tabella[0] == giocatore) || (tabella[3] == tabella[4] && tabella[3] == tabella[5] && tabella[3] == giocatore) || (tabella[6] == tabella[7] && tabella[6] == tabella[8] && tabella[6] == giocatore) ||
                                      (tabella[0] == tabella[3] && tabella[0] == tabella[6] && tabella[0] == giocatore) || (tabella[1] == tabella[4] && tabella[1] == tabella[7] && tabella[1] == giocatore) || (tabella[2] == tabella[5] && tabella[2] == tabella[8] && tabella[2] == giocatore) ||
                                      (tabella[0] == tabella[4] && tabella[0] == tabella[8] && tabella[0] == giocatore) || (tabella[2] == tabella[4] && tabella[2] == tabella[6] && tabella[2] == giocatore))){
@@ -164,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (player=="secondo"){
             punteggioPlayer2+=1;
             TextView textPlayer1 = (TextView) findViewById(R.id.text_view_p2);
-            textPlayer1.setText("Player 1: " + punteggioPlayer1);
+            textPlayer1.setText("Player 2: " + punteggioPlayer2);
         }
     }
 
