@@ -4,9 +4,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,11 +19,22 @@ public class MainActivity extends AppCompatActivity {
     private String[] tabella = new String[9];
     private int punteggioPlayer1, punteggioPlayer2 = 0;
 //    private String namePlayer1, getNamePlayer2;
+    private String nomeGiocatore1 ;
+    private String nomeGiocatore2 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        this.nomeGiocatore1 = intent.getStringExtra("giocatore1");
+        this.nomeGiocatore2 = intent.getStringExtra("giocatore2");
+        System.out.println("main-------------->"+intent.getStringExtra("giocatore1"));
+        EditText editText1 = (EditText) findViewById(R.id.editText1);
+        EditText editText2 = (EditText) findViewById(R.id.editText2);
+        editText1.setText(this.nomeGiocatore1 + " : " + punteggioPlayer1);
+        editText2.setText(this.nomeGiocatore2 + " : " + punteggioPlayer2);
 
         PACKAGE_NAME = getApplicationContext().getPackageName();
         svuotaTabella();
@@ -113,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textPlayer2 = (TextView) findViewById(R.id.text_view_p2);
         punteggioPlayer1 = 0;
         punteggioPlayer2 = 0;
-        textPlayer1.setText("Player 1: " + punteggioPlayer1);
-        textPlayer2.setText("Player 2: " + punteggioPlayer2);
+        textPlayer1.setText(nomeGiocatore1 + ": " + punteggioPlayer1);
+        textPlayer2.setText(nomeGiocatore2 + " " + punteggioPlayer2);
         giocatore = "primo";
         turnoInizio = "primo";
 
@@ -159,11 +172,11 @@ public class MainActivity extends AppCompatActivity {
         if (player=="primo"){
             punteggioPlayer1+=1;
             TextView textPlayer1 = (TextView) findViewById(R.id.text_view_p1);
-            textPlayer1.setText("Player 1: " + punteggioPlayer1);
+            textPlayer1.setText(nomeGiocatore1 + " " + punteggioPlayer2);
         } else if (player=="secondo"){
             punteggioPlayer2+=1;
-            TextView textPlayer1 = (TextView) findViewById(R.id.text_view_p2);
-            textPlayer1.setText("Player 2: " + punteggioPlayer2);
+            TextView textPlayer2 = (TextView) findViewById(R.id.text_view_p2);
+            textPlayer2.setText(nomeGiocatore2 + " " + punteggioPlayer2);
         }
     }
 

@@ -20,14 +20,14 @@ tools:context=".MainActivity">
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="Player 1: 0"
+                android:text=""
                 android:textSize="30sp"/>
             <TextView
                 android:id="@+id/text_view_p2"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:text="Player 2: 0"
+                android:text=""
                 android:textSize="30sp"
                 android:layout_below="@id/text_view_p1"/>
             <Button
