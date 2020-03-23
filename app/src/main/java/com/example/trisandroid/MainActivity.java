@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
         punteggioPlayer2 = 0;
         textPlayer1.setText("Player 1: " + punteggioPlayer1);
         textPlayer2.setText("Player 2: " + punteggioPlayer2);
+        giocatore = "primo";
+        turnoInizio = "primo";
 
     }
 
@@ -127,12 +129,14 @@ public class MainActivity extends AppCompatActivity {
             svuotaTabella();
             aggiungiVittoriaAPlayer(giocatore);
             cambiaGiocatoreInizio(turnoInizio);
+            return;
         } else if( giocatore=="secondo" && ((tabella[0] == tabella[1] && tabella[0] == tabella[2] && tabella[0] == giocatore) || (tabella[3] == tabella[4] && tabella[3] == tabella[5] && tabella[3] == giocatore) || (tabella[6] == tabella[7] && tabella[6] == tabella[8] && tabella[6] == giocatore) ||
                                             (tabella[0] == tabella[3] && tabella[0] == tabella[6] && tabella[0] == giocatore) || (tabella[1] == tabella[4] && tabella[1] == tabella[7] && tabella[1] == giocatore) || (tabella[2] == tabella[5] && tabella[2] == tabella[8] && tabella[2] == giocatore) ||
                                             (tabella[0] == tabella[4] && tabella[0] == tabella[8] && tabella[0] == giocatore) || (tabella[2] == tabella[4] && tabella[2] == tabella[6] && tabella[2] == giocatore))){
             svuotaTabella();
             aggiungiVittoriaAPlayer(giocatore);
             cambiaGiocatoreInizio(turnoInizio);
+            return;
         }
         //controllo se qualcuno ha vinto
         //controllo tutte le righe
@@ -149,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
     private void pareggio(){
         //svuoto la tabella
         svuotaTabella();
+        cambiaGiocatoreInizio(turnoInizio);
     }
 
     private void aggiungiVittoriaAPlayer(String player){
@@ -185,8 +190,10 @@ public class MainActivity extends AppCompatActivity {
     private void cambiaGiocatoreInizio(String turno){
         if(turno=="primo"){
             this.turnoInizio="secondo";
+            this.giocatore="secondo";
         }else if (turno=="secondo"){
             this.turnoInizio="primo";
+            this.giocatore="primo";
         }
     }
 
