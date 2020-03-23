@@ -1,0 +1,13 @@
+<resources>
+    <id type="id" name="text_view_p1"></id>
+    <id type="id" name="text_view_p2"></id>
+    <id type="id" name="button1"></id>
+    <id type="id" name="button2"></id>
+    <id type="id" name="button3"></id>
+    <id type="id" name="button4"></id>
+    <id type="id" name="button5"></id>
+    <id type="id" name="button6"></id>
+    <id type="id" name="button7"></id>
+    <id type="id" name="button8"></id>
+    <id type="id" name="button9"></id>
+</resources>

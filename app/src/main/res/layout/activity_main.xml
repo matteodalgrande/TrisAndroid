@@ -5,88 +5,148 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MainActivity">
-
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#009688"
         android:orientation="vertical">
-        <TableRow
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/text_view_p1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Player 1: 0"
+                android:textSize="30sp"/>
+            <TextView
+                android:id="@+id/text_view_p2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:text="Player 2: 0"
+                android:textSize="30sp"
+                android:layout_below="@id/text_view_p1"/>
             <Button
-                android:tag="1"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:onClick="reset"
+                android:text="reset"
+                android:tag="12"/>
 
-            <Button
-                android:tag="2"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
+        </RelativeLayout>
 
-            <Button
-                android:tag="3"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
 
-        </TableRow>
-        <TableRow
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="match_parent"
+            android:background="#009688"
+            android:orientation="vertical">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <Button
-                android:tag="4"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
+                <Button
+                    android:id="@+id/button1"
+                    android:tag="1"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
 
-            <Button
-                android:tag="5"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
+                <Button
+                    android:id="@+id/button2"
+                    android:tag="2"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
 
-            <Button
-                android:tag="6"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
-        </TableRow>
+                <Button
+                    android:id="@+id/button3"
+                    android:tag="3"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <Button
-                android:tag="7"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
+                <Button
+                    android:id="@+id/button4"
+                    android:tag="4"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
 
-            <Button
-                android:tag="8"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
+                <Button
+                    android:id="@+id/button5"
+                    android:tag="5"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
 
-            <Button
-                android:tag="9"
-                android:layout_width = "0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:onClick="click" />
-        </TableRow>
-    </TableLayout>
+                <Button
+                    android:id="@+id/button6"
+                    android:tag="6"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:tag="7"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
+
+                <Button
+                    android:id="@+id/button8"
+                    android:tag="8"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
+
+                <Button
+                    android:id="@+id/button9"
+                    android:tag="9"
+                    android:layout_width = "0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="click"
+                    android:textSize="60sp"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
