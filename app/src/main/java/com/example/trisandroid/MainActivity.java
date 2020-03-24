@@ -3,13 +3,18 @@ package com.example.trisandroid;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -132,6 +137,29 @@ public class MainActivity extends AppCompatActivity {
             svuotaTabella();
             aggiungiVittoriaAPlayer(giocatore);
             cambiaGiocatoreInizio(turnoInizio);
+
+//            Context context = getApplicationContext();
+//            CharSequence text = "Vittoria di " + nomeGiocatore1 + "!";
+//            int duration = Toast.LENGTH_SHORT;
+//
+//            Toast toast = Toast.makeText(context, text, duration);
+//            toast.setGravity(Gravity.CENTER|Gravity.CENTER, 0, 0);
+//            toast.show();
+
+
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast_container));
+
+            TextView text = (TextView) layout.findViewById(R.id.text);
+            text.setText("This is a custom toast");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setView(layout);
+            toast.show();
+
+
             return;
         } else if( giocatore=="secondo" && ((tabella[0] == tabella[1] && tabella[0] == tabella[2] && tabella[0] == giocatore) || (tabella[3] == tabella[4] && tabella[3] == tabella[5] && tabella[3] == giocatore) || (tabella[6] == tabella[7] && tabella[6] == tabella[8] && tabella[6] == giocatore) ||
                                             (tabella[0] == tabella[3] && tabella[0] == tabella[6] && tabella[0] == giocatore) || (tabella[1] == tabella[4] && tabella[1] == tabella[7] && tabella[1] == giocatore) || (tabella[2] == tabella[5] && tabella[2] == tabella[8] && tabella[2] == giocatore) ||
@@ -139,6 +167,22 @@ public class MainActivity extends AppCompatActivity {
             svuotaTabella();
             aggiungiVittoriaAPlayer(giocatore);
             cambiaGiocatoreInizio(turnoInizio);
+
+
+
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast_container));
+
+            TextView text = (TextView) layout.findViewById(R.id.text);
+            text.setText("This is a custom toast");
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setView(layout);
+            toast.show();
+
+
             return;
         }
         //controllo se qualcuno ha vinto
@@ -155,6 +199,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void pareggio(){
         //svuoto la tabella
+        Context context = getApplicationContext();
+        CharSequence text = "Pareggio!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, 0);
+        toast.show();
         svuotaTabella();
         cambiaGiocatoreInizio(turnoInizio);
     }
