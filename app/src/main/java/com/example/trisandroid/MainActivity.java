@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] tabella = new String[9];
     private int punteggioPlayer1, punteggioPlayer2 = 0;
 //    private String namePlayer1, getNamePlayer2;
-    private String nomeGiocatore1 ;
-    private String nomeGiocatore2 ;
+    private String nomeGiocatore1;
+    private String nomeGiocatore2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         this.nomeGiocatore1 = intent.getStringExtra("giocatore1");
         this.nomeGiocatore2 = intent.getStringExtra("giocatore2");
-        System.out.println("main-------------->"+intent.getStringExtra("giocatore1"));
-        EditText editText1 = (EditText) findViewById(R.id.editText1);
-        EditText editText2 = (EditText) findViewById(R.id.editText2);
-        editText1.setText(this.nomeGiocatore1 + " : " + punteggioPlayer1);
-        editText2.setText(this.nomeGiocatore2 + " : " + punteggioPlayer2);
+        System.out.println("main-------------->" + intent.getStringExtra("giocatore1"));
+        TextView editText1 = (TextView) findViewById(R.id.text_view_p1);
+        TextView editText2 = (TextView) findViewById(R.id.text_view_p2);
+        editText1.setText(this.nomeGiocatore1 + " : " + this.punteggioPlayer1);
+        editText2.setText(this.nomeGiocatore2 + " : " + this.punteggioPlayer2);
 
         PACKAGE_NAME = getApplicationContext().getPackageName();
         svuotaTabella();
