@@ -33,21 +33,12 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("main-------------->" + intent.getStringExtra("giocatore1"));
         TextView editText1 = (TextView) findViewById(R.id.text_view_p1);
         TextView editText2 = (TextView) findViewById(R.id.text_view_p2);
-        editText1.setText(this.nomeGiocatore1 + " : " + this.punteggioPlayer1);
-        editText2.setText(this.nomeGiocatore2 + " : " + this.punteggioPlayer2);
+        editText1.setText(this.nomeGiocatore1 + ": " + this.punteggioPlayer1);
+        editText2.setText(this.nomeGiocatore2 + ": " + this.punteggioPlayer2);
 
         PACKAGE_NAME = getApplicationContext().getPackageName();
         svuotaTabella();
     }
-
-//    public void click(View view){
-//        Button vista = (Button) view;
-//        System.out.println(view);
-//  //      System.out.println(view.getResources().getResourceName(view.getId()));
-//        System.out.println(view.getTag());
-//    }
-    //git commit -m "1)eliminazione id e aggiunta di tag nei Button dell'xml della view; 2)aggiunta dell'alert se si dovesse ripremere la stessa casella"
-
 
     public void click(View view) {
         if (giocatore == "primo"){
@@ -127,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         punteggioPlayer1 = 0;
         punteggioPlayer2 = 0;
         textPlayer1.setText(nomeGiocatore1 + ": " + punteggioPlayer1);
-        textPlayer2.setText(nomeGiocatore2 + " " + punteggioPlayer2);
+        textPlayer2.setText(nomeGiocatore2 + ": " + punteggioPlayer2);
         giocatore = "primo";
         turnoInizio = "primo";
 
@@ -172,11 +163,11 @@ public class MainActivity extends AppCompatActivity {
         if (player=="primo"){
             punteggioPlayer1+=1;
             TextView textPlayer1 = (TextView) findViewById(R.id.text_view_p1);
-            textPlayer1.setText(nomeGiocatore1 + " " + punteggioPlayer2);
+            textPlayer1.setText(nomeGiocatore1 + ": " + punteggioPlayer1);
         } else if (player=="secondo"){
             punteggioPlayer2+=1;
             TextView textPlayer2 = (TextView) findViewById(R.id.text_view_p2);
-            textPlayer2.setText(nomeGiocatore2 + " " + punteggioPlayer2);
+            textPlayer2.setText(nomeGiocatore2 + ": " + punteggioPlayer2);
         }
     }
 
