@@ -61,7 +61,7 @@ tools:context=".MainActivity">
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:onClick="click"
-                    android:textSize="60sp"/>
+                    android:textSize="60sp" />
 
                 <Button
                     android:id="@+id/button2"

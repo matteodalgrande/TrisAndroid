@@ -10,4 +10,12 @@
     <id type="id" name="button7"></id>
     <id type="id" name="button8"></id>
     <id type="id" name="button9"></id>
+
+    <id type="id" name="buttonLoginMultiplayer"></id>
+    <id type="id" name="editTextMultiplayer"></id>
+
+    <id type="id" name="listViewLobby"></id>
+    <id type="id" name="buttonLobby"></id>
+
+    <id type="id" name="buttonPoke"></id>
 </resources>
