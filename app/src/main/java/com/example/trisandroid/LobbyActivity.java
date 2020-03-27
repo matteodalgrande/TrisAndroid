@@ -62,7 +62,7 @@ public class LobbyActivity extends AppCompatActivity {
                 button.setText("CREATING ROOM");
                 button.setEnabled(false);
                 roomName = playerName;
-                roomRef = database.getReference("rooms/" + roomName + "/player1");
+                roomRef = database.getReference("rooms/" + roomName + "/players/player1");
                 addRoomEventListener();
                 roomRef.setValue(playerName);
             }
@@ -73,15 +73,22 @@ public class LobbyActivity extends AppCompatActivity {
           public void onItemClick(AdapterView<?> parent, View view, int position, long id){
               //join an existing room and add yourself as player2
               roomName = roomsList.get(position);
-              roomRef = database.getReference("rooms/" + roomName + "/player2");
-              addRoomEventListener();
-              roomRef.setValue(playerName);
+              if(roomName.equals(playerName)){
+                  roomRef = database.getReference("rooms/" + roomName + "/players/player1");
+                  addRoomEventListener();
+                  roomRef.setValue(playerName);
+              } else if (!roomName.equals(playerName)){
+                  roomRef = database.getReference("rooms/" + roomName + "/players/player2");
+                  addRoomEventListener();
+                  roomRef.setValue(playerName);
+              }
           }
         });
         //show if new room is available
         addRoomsEventListener();
     }
 
+    //se creo una stanza invio un IntetExtra con il nome della stanza e passo alla schermata della stanza
     private void addRoomEventListener(){
         roomRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -89,7 +96,7 @@ public class LobbyActivity extends AppCompatActivity {
                 //join the room
                 button.setText("CREATE ROOM");
                 button.setEnabled(true);
-                Intent intent = new Intent(getApplicationContext(), PokeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TrisMultiplayerActivity.class);
                 intent.putExtra("roomName", roomName);
                 startActivity(intent);
             }
@@ -110,7 +117,7 @@ public class LobbyActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //show list of rooms
-                roomsList.clear();;
+                roomsList.clear();
                 Iterable<DataSnapshot> rooms = dataSnapshot.getChildren();
                 for(DataSnapshot snapshot : rooms){
                     roomsList.add(snapshot.getKey());

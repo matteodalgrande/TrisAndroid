@@ -12,18 +12,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Tris extends AppCompatActivity {
 
     private static String PACKAGE_NAME;
     private String giocatore = "primo";
     private String turnoInizio = "primo";
     private String[] tabella = new String[9];
     private int punteggioPlayer1, punteggioPlayer2 = 0;
-//    private String namePlayer1, getNamePlayer2;
     private String nomeGiocatore1;
     private String nomeGiocatore2;
 
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         this.nomeGiocatore1 = intent.getStringExtra("giocatore1");
         this.nomeGiocatore2 = intent.getStringExtra("giocatore2");
-        System.out.println("main-------------->" + intent.getStringExtra("giocatore1"));
         TextView editText1 = (TextView) findViewById(R.id.text_view_p1);
         TextView editText2 = (TextView) findViewById(R.id.text_view_p2);
         editText1.setText(this.nomeGiocatore1 + ": " + this.punteggioPlayer1);
@@ -58,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 controllaVittoria(giocatore);
             } else{
                 //alert--> la cella è già piena
-                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(Tris.this).create();
                 alertDialog.setTitle("Mossa non concessa");
                 alertDialog.setMessage("Questa casella è già stata selezionata. E' necessario selezionare una casella vuota");
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
@@ -83,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 controllaVittoria(giocatore);
             } else{
                 //alert--> la cella è già piena
-                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(Tris.this).create();
                 alertDialog.setTitle("Mossa non concessa");
                 alertDialog.setMessage("Questa casella è già stata selezionata. E' necessario selezionare una casella vuota");
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",

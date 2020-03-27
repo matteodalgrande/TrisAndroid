@@ -14,7 +14,7 @@ public class LoginActivity extends AppCompatActivity {
             setContentView(R.layout.login_main);
         }
         public void cambiaSchermata(View view) {
-            Intent myIntent = new Intent(this, MainActivity.class);
+            Intent myIntent = new Intent(this, Tris.class);
             EditText editText1 = (EditText) findViewById(R.id.editText1);
             EditText editText2 = (EditText) findViewById(R.id.editText2);
             System.out.println("login-------------->" + editText1.getText());

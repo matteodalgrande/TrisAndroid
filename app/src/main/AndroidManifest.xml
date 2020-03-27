@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".PokeActivity" android:label="@string/app_name"></activity>
+        <activity android:name=".TrisMultiplayerActivity" android:label="@string/app_name"></activity>
         <activity android:name=".LobbyActivity" android:label="@string/app_name"></activity>
 
         <activity
@@ -35,7 +35,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Tris"
             android:label="@string/app_name" />
     </application>
 
